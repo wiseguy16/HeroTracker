@@ -83,7 +83,7 @@
         self.heroNameLabel.text = self.hero.name;
         self.heroHomeWorldLabel.text = self.hero.homeworld;
         self.heroPowersLabel.text = self.hero.powers;
-       // self.heroImageView.image = [UIImage imageNamed:imageName];
+        self.heroImageView.image = [UIImage imageNamed:self.hero.imageName];
         
         
         

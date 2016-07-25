@@ -66,14 +66,14 @@
 		4AFE70CC1D466D3E000F5C67 /* HeroTracker */ = {
 			isa = PBXGroup;
 			children = (
-				4AFE70EF1D46A732000F5C67 /* HeroMasterTableViewController.h */,
-				4AFE70F01D46A732000F5C67 /* HeroMasterTableViewController.m */,
 				4AFE70D01D466D3E000F5C67 /* AppDelegate.h */,
 				4AFE70D11D466D3E000F5C67 /* AppDelegate.m */,
 				4AFE70EC1D467BDE000F5C67 /* Hero.h */,
 				4AFE70ED1D467BDE000F5C67 /* Hero.m */,
 				4AFE70E91D46780C000F5C67 /* HeroDetailViewController.h */,
 				4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */,
+				4AFE70EF1D46A732000F5C67 /* HeroMasterTableViewController.h */,
+				4AFE70F01D46A732000F5C67 /* HeroMasterTableViewController.m */,
 				4AFE70D61D466D3E000F5C67 /* Main.storyboard */,
 				4AFE70D91D466D3E000F5C67 /* Assets.xcassets */,
 				4AFE70DB1D466D3E000F5C67 /* LaunchScreen.storyboard */,

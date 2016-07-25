@@ -13,6 +13,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *homeworld;
 @property (nonatomic) NSString *powers;
+@property (nonatomic) NSString *imageName;
 
 + (Hero *)heroWithDictionary:(NSDictionary *)heroDict;
 

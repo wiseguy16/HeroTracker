@@ -19,7 +19,7 @@
         aHero.name = [heroDict objectForKey:@"name"];
         aHero.homeworld = heroDict[@"homeworld"];
         aHero.powers = heroDict[@"powers"];
-      //  aHero.image = [heroDict initWithContentsOfFile:@"heroImage"];
+        aHero.imageName = heroDict[@"heroImage"];
     }
     
     return aHero;
