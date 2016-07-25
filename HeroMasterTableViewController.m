@@ -18,7 +18,8 @@
 
 @implementation HeroMasterTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
 //    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
@@ -58,34 +59,67 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
 
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
 
     return self.heroes.count;
 }
 
-/* ********************WE WILL NEED THIS METHOD!!!************************
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+// ********************WE WILL NEED THIS METHOD!!!************************
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HeroCell" forIndexPath:indexPath];
+    
+    Hero *aHero = self.heroes[indexPath.row];
     
     // Configure the cell...
+    cell.textLabel.text = aHero.name;
+    cell.detailTextLabel.text = aHero.homeworld;
     
     return cell;
 }
-*/
+
 
 // *******************WE WILL NEED METHOD didSelectRowAtIndexPath****************
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    HeroDetailViewController *newHeroVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HeroDetailVC"];
+    
+    [[self navigationController] pushViewController:newHeroVC animated:YES];
+    
+    Hero *selectedHero = self.heroes[indexPath.row];
+    newHeroVC.hero = selectedHero;
+    
+    //int selectedRow = indexPath.row;
+    //NSLog(@"touch on row %d", selectedRow);
+    
+    /*
+    Yourstring=[catagorry objectAtIndex:indexPath.row];
+    
+    //Pushing next view
+    cntrSecondViewController *cntrinnerService = [[cntrSecondViewController alloc] initWithNibName:@"cntrSecondViewController" bundle:nil];
+    [self.navigationController pushViewController:cntrinnerService animated:YES];
+     */
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
