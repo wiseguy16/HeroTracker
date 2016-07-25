@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HeroDetailViewController.h
 //  HeroTracker
 //
 //  Created by Gregory Weiss on 7/25/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HeroDetailViewController : UIViewController
 
 @end
-
