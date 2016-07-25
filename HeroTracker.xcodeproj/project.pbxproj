@@ -15,6 +15,7 @@
 		4AFE70E51D466E47000F5C67 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE70E41D466E47000F5C67 /* heroes.json */; };
 		4AFE70E81D4677B6000F5C67 /* HeroMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE70E71D4677B6000F5C67 /* HeroMasterTableViewController.m */; };
 		4AFE70EB1D46780C000F5C67 /* HeroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */; };
+		4AFE70EE1D467BDE000F5C67 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE70ED1D467BDE000F5C67 /* Hero.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		4AFE70E71D4677B6000F5C67 /* HeroMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeroMasterTableViewController.m; path = ../HeroMasterTableViewController.m; sourceTree = "<group>"; };
 		4AFE70E91D46780C000F5C67 /* HeroDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailViewController.h; sourceTree = "<group>"; };
 		4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailViewController.m; sourceTree = "<group>"; };
+		4AFE70EC1D467BDE000F5C67 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		4AFE70ED1D467BDE000F5C67 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +66,10 @@
 		4AFE70CC1D466D3E000F5C67 /* HeroTracker */ = {
 			isa = PBXGroup;
 			children = (
-				4AFE70E41D466E47000F5C67 /* heroes.json */,
 				4AFE70D01D466D3E000F5C67 /* AppDelegate.h */,
 				4AFE70D11D466D3E000F5C67 /* AppDelegate.m */,
+				4AFE70EC1D467BDE000F5C67 /* Hero.h */,
+				4AFE70ED1D467BDE000F5C67 /* Hero.m */,
 				4AFE70E91D46780C000F5C67 /* HeroDetailViewController.h */,
 				4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */,
 				4AFE70E61D4677B6000F5C67 /* HeroMasterTableViewController.h */,
@@ -75,6 +79,7 @@
 				4AFE70DB1D466D3E000F5C67 /* LaunchScreen.storyboard */,
 				4AFE70DE1D466D3E000F5C67 /* Info.plist */,
 				4AFE70CD1D466D3E000F5C67 /* Supporting Files */,
+				4AFE70E41D466E47000F5C67 /* heroes.json */,
 			);
 			path = HeroTracker;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFE70EE1D467BDE000F5C67 /* Hero.m in Sources */,
 				4AFE70E81D4677B6000F5C67 /* HeroMasterTableViewController.m in Sources */,
 				4AFE70EB1D46780C000F5C67 /* HeroDetailViewController.m in Sources */,
 				4AFE70D21D466D3E000F5C67 /* AppDelegate.m in Sources */,

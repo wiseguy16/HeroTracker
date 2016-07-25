@@ -7,8 +7,12 @@
 //
 
 #import "HeroMasterTableViewController.h"
+#import "HeroDetailViewController.h"
+#import "Hero.h"
 
 @interface HeroMasterTableViewController ()
+
+@property NSMutableArray *heroes;
 
 @end
 
@@ -17,12 +21,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
+    
+    self.heroes = [[NSMutableArray alloc] init];
+    
+    // ******************WE HAVE TO CALL-----loadHeroes method********************
+    
+    [self loadHeroes];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+#pragma mark - Get hero objects outof the JSON and load them all in a NSDictionary
+
+- (void)loadHeroes
+{
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"heroes" ofType:@"json"];
+    // This is a built in method that allows us to load a JSON file into native Cocoa objects (NSDictionaries and NSArrays).
+    NSArray *heroesArrayForJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+    
+    for (NSDictionary *aDict in heroesArrayForJSON)
+    {
+        
+        Hero *aHero = [Hero heroWithDictionary:aDict];
+        [self.heroes addObject:aHero];
+        
+    }
+    
+    [self.tableView reloadData];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,16 +66,16 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.heroes.count;
 }
 
-/*
+/* ********************WE WILL NEED THIS METHOD!!!************************
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
@@ -50,6 +84,8 @@
     return cell;
 }
 */
+
+// *******************WE WILL NEED METHOD didSelectRowAtIndexPath****************
 
 /*
 // Override to support conditional editing of the table view.
