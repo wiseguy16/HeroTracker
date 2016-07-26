@@ -36,7 +36,7 @@
 }
 
 /*
-#pragma mark - Navigation
+#pragma mark - Navigation********DON"T NEED THIS TIME !!!!!!!!!*********
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -63,23 +63,11 @@
 
 - (void)configureView
 {
-    // What is being checked here?
-    if (self.hero) // This is to is an agent object does exist.
+   
+    if (self.hero)
     {
-      
-        //
-        // 20. Once we have the last name of the agent from the code above, how do we set the view's title to the right
-        //     string?
-        //
-        self.title = [NSString stringWithFormat: @"HERO"]; // FIX THIS!!!----FIXED!!
+        self.title = [NSString stringWithFormat: @"HERO"];
         
-        
-        //
-        // 21. We need to set the three labels in our view to the agent's cover name, real name, and access label.
-        //
-        //     The level label will be a little trickier, because the level property is an NSInteger. We also want that label
-        //     to read "Level #". How do we do that?
-        //
         self.heroNameLabel.text = self.hero.name;
         self.heroHomeWorldLabel.text = self.hero.homeworld;
         self.heroPowersLabel.text = self.hero.powers;

@@ -20,11 +20,3 @@
 @end
 
 
-/*
- {
- "name": "Thor",
- "homeworld": "Asgard",
- "powers": "Superhuman strength, endurance, and longevity; abilities via Mjolnir: dimensional transportation; electric manipulation; flight; weather manipulation"
- },
- 
- */
