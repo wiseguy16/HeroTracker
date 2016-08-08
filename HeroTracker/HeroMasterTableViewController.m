@@ -119,6 +119,8 @@
     
 }
 
+#pragma mark - Search bar method
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     // called when keyboard search button pressed
@@ -131,6 +133,8 @@
     
 }
 
+#pragma mark - Using api inside of a custom search method
+
 -(void)doSearch:(NSString *)searchThisMarvel
 {
     [self.mySearchBar resignFirstResponder];
@@ -138,11 +142,15 @@
     apiController.delegate = self;
     [apiController searchForCharacter:searchThisMarvel];
     self.mySearchBar.text = @"";
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.tableView reloadData];
+//    });
     
     // search: searchThisMarvel
     
 }
 
+#pragma mark - Cancel button to resign typing
 
 - (IBAction)cancelTapped:(UIBarButtonItem *)sender
 {

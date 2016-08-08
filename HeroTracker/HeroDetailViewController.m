@@ -35,15 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation********DON"T NEED THIS TIME !!!!!!!!!*********
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Managing the detail view
 
@@ -73,9 +65,7 @@
         self.heroPowersLabel.text = self.hero.theDescription;
         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:self.hero.imageName]];
         
-        self.heroImageView.image = [UIImage imageWithData: imageData];
-        
-        
+        self.heroImageView.image = [UIImage imageWithData: imageData]; // This should probably be done async????
         
     }
 }
