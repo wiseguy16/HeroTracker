@@ -15,9 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="U0f-Mp-zVd">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="cet-mP-a8J" id="Nu8-QR-qss"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HeroCell" textLabel="J6w-OU-FLT" detailTextLabel="l68-8v-e5o" style="IBUITableViewCellStyleValue1" id="UvG-PH-Q9x">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UvG-PH-Q9x" id="HIf-Mp-eYq">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -46,7 +54,16 @@
                             <outlet property="delegate" destination="cet-mP-a8J" id="afR-2A-mmY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Marvel Hero Tracker" id="EjT-0X-bDE"/>
+                    <navigationItem key="navigationItem" title="Marvel Hero Tracker" id="EjT-0X-bDE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="IFU-EK-aMg">
+                            <connections>
+                                <action selector="cancelTapped:" destination="cet-mP-a8J" id="5jc-of-Oko"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mySearchBar" destination="U0f-Mp-zVd" id="oKH-NZ-ylo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwO-97-wtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Appears in 1234 comics!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-hR-Cjp">
-                                <rect key="frame" x="231" y="329" width="139" height="15"/>
+                                <rect key="frame" x="230.5" y="329" width="139" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

@@ -19,17 +19,12 @@
 - (void)searchForCharacter:(NSString *)characterName;
 
 
-
-
 /*
 -(void)searchGitHubFor:(NSString *)searchTerm;
  */
 
 
-
 @end
-
-
 
 
 // [[APIController sharedAPIController] searchForCharacter:@"Hulk"];

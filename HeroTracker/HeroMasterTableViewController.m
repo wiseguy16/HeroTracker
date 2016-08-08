@@ -11,7 +11,9 @@
 #import "Hero.h"
 #import "APIController.h"
 
-@interface HeroMasterTableViewController () <APIControllerProtocol>
+@interface HeroMasterTableViewController () <APIControllerProtocol, UISearchBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *mySearchBar;
 
 @property NSMutableArray *heroes;
 
@@ -23,38 +25,23 @@
 {
     [super viewDidLoad];
     
-    APIController *apiController = [APIController sharedAPIController];
-      apiController.delegate = self;
-     [apiController searchForCharacter:@"Spider-Man"];
-    
+//    APIController *apiController = [APIController sharedAPIController];
+//    apiController.delegate = self;
+//    [apiController searchForCharacter:@"Spider-Man"]; // This was here to check api!
 //    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
     
-    /*
-     Your public key
-     
-     e739fa38cc0c96087a3886327d580973
-     
-     Your private key
-     
-     daaabe6580b3169ade2709339b0a7bb943930fa6
-     */
     
     self.heroes = [[NSMutableArray alloc] init];
     
 // ******************WE HAVE TO CALL-----loadHeroes method********************
     
- //   [self loadHeroes];
+ //   [self loadHeroes];  // ****NOT using since API works!!!
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+ }
 
 #pragma mark - Get hero objects outof the JSON and load them all in a NSDictionary
 
-- (void)loadHeroes
+- (void)loadHeroes // *******This is here just to see if I'm reading JSON correctly!!!!
 {
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"heroes" ofType:@"json"];
@@ -67,8 +54,6 @@
             [self.heroes addObject:aHero];
     }
     
-//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-//    [self.heroes sortUsingDescriptors:[NSArray arrayWithObject:sort]];
     [self.tableView reloadData];
     
 }
@@ -122,14 +107,6 @@
     Hero *selectedHero = self.heroes[indexPath.row];
     newHeroVC.hero = selectedHero;
     
-    
-    /*
-    
-    //Pushing next view
-    cntrSecondViewController *cntrinnerService = [[cntrSecondViewController alloc] initWithNibName:@"cntrSecondViewController" bundle:nil];
-    [self.navigationController pushViewController:cntrinnerService animated:YES];
-     */
-    
 }
 
 -(void)didReceiveAPIResults:(NSDictionary *)gitHubResponse
@@ -142,6 +119,36 @@
     
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    // called when keyboard search button pressed
+    
+    if ([self.mySearchBar.text  isEqual: @""])
+    {
+        return;
+    }
+    [self doSearch:self.mySearchBar.text];
+    
+}
+
+-(void)doSearch:(NSString *)searchThisMarvel
+{
+    [self.mySearchBar resignFirstResponder];
+    APIController *apiController = [APIController sharedAPIController];
+    apiController.delegate = self;
+    [apiController searchForCharacter:searchThisMarvel];
+    self.mySearchBar.text = @"";
+    
+    // search: searchThisMarvel
+    
+}
+
+
+- (IBAction)cancelTapped:(UIBarButtonItem *)sender
+{
+     [self.mySearchBar resignFirstResponder];
+    self.mySearchBar.text = @"";
+}
 
 // One tiny change
 
