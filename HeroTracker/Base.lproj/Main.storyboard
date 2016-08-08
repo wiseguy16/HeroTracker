@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--S.H.I.E.L.D. Hero Tracker-->
+        <!--Marvel Hero Tracker-->
         <scene sceneID="FL4-J9-K6U">
             <objects>
                 <tableViewController id="cet-mP-a8J" customClass="HeroMasterTableViewController" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="cet-mP-a8J" id="afR-2A-mmY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="S.H.I.E.L.D. Hero Tracker" id="EjT-0X-bDE"/>
+                    <navigationItem key="navigationItem" title="Marvel Hero Tracker" id="EjT-0X-bDE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwO-97-wtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -72,10 +72,8 @@
         self.heroHomeWorldLabel.text = [NSString stringWithFormat: @"Appears in %@ comics!", self.hero.appearances];
         self.heroPowersLabel.text = self.hero.theDescription;
         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:self.hero.imageName]];
-        // cell.image = [UIImage imageWithData: imageData];
         
         self.heroImageView.image = [UIImage imageWithData: imageData];
-      //  self.heroImageView.image = [UIImage imageNamed:self.hero.imageName];
         
         
         

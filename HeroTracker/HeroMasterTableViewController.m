@@ -23,8 +23,9 @@
 {
     [super viewDidLoad];
     
-    
-    // [[APIController sharedAPIController] searchForCharacter:@"Hulk"];
+    APIController *apiController = [APIController sharedAPIController];
+      apiController.delegate = self;
+     [apiController searchForCharacter:@"Spider-Man"];
     
 //    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
     
@@ -42,7 +43,7 @@
     
 // ******************WE HAVE TO CALL-----loadHeroes method********************
     
-    [self loadHeroes];
+ //   [self loadHeroes];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

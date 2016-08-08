@@ -72,10 +72,13 @@ static NSString *privateAPIKey = @"daaabe6580b3169ade2709339b0a7bb943930fa6";
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error)
         {
-            NSDictionary *characterInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSError *parseError = nil;
+            NSDictionary *characterInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
             if (characterInfo)
             {
                 NSLog(@"characterInfo: %@", characterInfo);
+                //[self.delegate didReceiveAPIResults:gitHubResponse];
+                [self.delegate didReceiveAPIResults:characterInfo];
             }
         }
     }];

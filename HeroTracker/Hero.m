@@ -17,8 +17,7 @@
     if (heroDict)
     {
         aHero = [[Hero alloc] init];
-        aHero.attributionText = [heroDict objectForKey:@"attributionText"];
-        //aHero.attributionText = heroDict[@"attributionText"]; // credit to Marvel
+        aHero.attributionText = [heroDict objectForKey:@"attributionText"]; // credit to Marvel
         
         NSDictionary *dataDict = heroDict[@"data"];
         
@@ -39,26 +38,9 @@
             aHero.appearances = comicsDict[@"available"];
         }
         
-       // aHero.name =  marvelArray[1];
-        
-      //  aHero.homeworld = heroDict[@"homeworld"]; // Not using!!
-        
-       // aHero.theDescription = heroDict[@"description"];
-       // aHero.imageName = heroDict[@"path"];
-       
     }
     
     return aHero;
 }
 
 @end
-
-
-/*
- {
- "name": "Thor",
- "homeworld": "Asgard",
- "powers": "Superhuman strength, endurance, and longevity; abilities via Mjolnir: dimensional transportation; electric manipulation; flight; weather manipulation",
- "heroImage": "thor"
- },
- */
