@@ -9,8 +9,9 @@
 #import "HeroMasterTableViewController.h"
 #import "HeroDetailViewController.h"
 #import "Hero.h"
+#import "APIController.h"
 
-@interface HeroMasterTableViewController ()
+@interface HeroMasterTableViewController () <APIControllerProtocol>
 
 @property NSMutableArray *heroes;
 
@@ -126,6 +127,16 @@
     cntrSecondViewController *cntrinnerService = [[cntrSecondViewController alloc] initWithNibName:@"cntrSecondViewController" bundle:nil];
     [self.navigationController pushViewController:cntrinnerService animated:YES];
      */
+    
+}
+
+-(void)didReceiveAPIResults:(NSDictionary *)gitHubResponse
+{
+    Hero *aHero = [Hero heroWithDictionary:gitHubResponse];
+    [self.heroes addObject:aHero];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
     
 }
 

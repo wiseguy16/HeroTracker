@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol APIControllerProtocol
+
+-(void)didReceiveAPIResults:(NSDictionary *)gitHubResponse;
+
+@end
+
+
 @interface HeroMasterTableViewController : UITableViewController
 
 @end

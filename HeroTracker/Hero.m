@@ -16,10 +16,29 @@
     if (heroDict)
     {
         aHero = [[Hero alloc] init];
-        aHero.name = [heroDict objectForKey:@"name"];
-        aHero.homeworld = heroDict[@"homeworld"];
-        aHero.powers = heroDict[@"powers"];
-        aHero.imageName = heroDict[@"heroImage"];
+        aHero.attributionText = heroDict[@"attributionText"]; // credit to Marvel
+        
+        NSArray *marvelArray = heroDict[@"results"];
+        for (NSDictionary *result in marvelArray)
+        {
+            NSString *name  = result[@"name"];
+            aHero.name = name;
+            
+            NSString *aDescription = result[@"description"];
+            aHero.theDescription = aDescription;
+            
+            NSDictionary *anotherDict = result[@"thumbnail"];
+            NSString *aPath = anotherDict[@"path"];
+            aHero.imageName = [NSString stringWithFormat:@"%@.jpg", aPath];
+        }
+        
+       // aHero.name =  marvelArray[1];
+        
+        aHero.homeworld = heroDict[@"homeworld"]; // Not using!!
+        
+       // aHero.theDescription = heroDict[@"description"];
+       // aHero.imageName = heroDict[@"path"];
+       
     }
     
     return aHero;

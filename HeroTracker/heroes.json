@@ -3,54 +3,63 @@
     "name": "Thor",
     "homeworld": "Asgard",
     "powers": "Superhuman strength, endurance, and longevity; abilities via Mjolnir: dimensional transportation; electric manipulation; flight; weather manipulation",
-    "heroImage": "thor"
+    "heroImage": "thor",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Iron Man",
     "homeworld": "Earth",
     "powers": "Genius-level intellect; highly proficient scientist, engineer, and businessperson; via powered armored suit: superhuman strength and durability; supersonic flight at Mach 3; energy repulsors; missiles; regenerative life support (sometimes powered by solar power)",
-    "heroImage": "ironMan"
+    "heroImage": "ironMan",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Groot",
     "homeworld": "Planet X",
     "powers": "Ability to absorb wood to feed, rebuild self, enhance his strength and control trees; regeneration; resistance to fire",
-    "heroImage": "groot"
+    "heroImage": "groot",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Rocket Racoon",
     "homeworld": "Halfworld",
     "powers": "Genius-level intellect; master tactician and field commander; expert marksman and sniper; accomplished starship aviator; normal-physical attributes of an Earth raccoon",
-    "heroImage": "rocketRacoon"
+    "heroImage": "rocketRacoon",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Drax the Destroyer",
     "homeworld": "Earth",
     "powers": "Superhuman strength; stamina and resistance to injury; highly skilled in use of knives",
-    "heroImage": "draxTheDestroyer"
+    "heroImage": "draxTheDestroyer",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Star-Lord",
     "homeworld": "Earth",
     "powers": "Master strategist and problem solver; skilled marksman and fencer; use of element gun; via suit: superhuman strength and durability; flight; ability to travel through space",
-    "heroImage": "starLord"
+    "heroImage": "starLord",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Gamora",
     "homeworld": "Zen-Whoberi",
     "powers": "Highly skilled assassin and gymnast; skilled martial artist; superhuman strength, speed, agility and durability; accelerated healing factor",
-    "heroImage": "gamora"
+    "heroImage": "gamora",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Hulk",
     "homeworld": "Earth",
     "powers": "Bruce Banner: Genius-level intellect; Hulk: immense superhuman strength, stamina, durability, endurance, longevity, regenerative healing factor",
-    "heroImage": "hulk"
+    "heroImage": "hulk",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   },
   {
     "name": "Captain America",
     "homeworld": "Earth",
     "powers": "Peak physical condition; wields vibranium-steel alloy shield; expert tactician and field commander",
-    "heroImage": "captainAmerica"
+    "heroImage": "captainAmerica",
+  "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets."
   }
 ]
