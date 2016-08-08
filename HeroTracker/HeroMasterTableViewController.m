@@ -104,7 +104,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     HeroDetailViewController *newHeroVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HeroDetailVC"];
-    
     [[self navigationController] pushViewController:newHeroVC animated:YES];
     
     Hero *selectedHero = self.heroes[indexPath.row];

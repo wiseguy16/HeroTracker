@@ -75,7 +75,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="captainAmerica" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-DT-WOe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" image="captainAmerica" translatesAutoresizingMaskIntoConstraints="NO" id="sQM-DT-WOe">
                                 <rect key="frame" x="296" y="72" width="284" height="177"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="heroPowers" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oH-8F-r2U">
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkx-hi-kbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376" y="438"/>
+            <point key="canvasLocation" x="2424" y="438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K1F-YD-fvZ">
