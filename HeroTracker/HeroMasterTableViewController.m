@@ -24,6 +24,16 @@
     
 //    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
     
+    /*
+     Your public key
+     
+     e739fa38cc0c96087a3886327d580973
+     
+     Your private key
+     
+     daaabe6580b3169ade2709339b0a7bb943930fa6
+     */
+    
     self.heroes = [[NSMutableArray alloc] init];
     
 // ******************WE HAVE TO CALL-----loadHeroes method********************
