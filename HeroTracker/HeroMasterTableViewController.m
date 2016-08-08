@@ -23,6 +23,9 @@
 {
     [super viewDidLoad];
     
+    
+    // [[APIController sharedAPIController] searchForCharacter:@"Hulk"];
+    
 //    self.title = @"S.H.I.E.L.D. Hero Tracker";    // DID THIS IN STORYBOARD
     
     /*
@@ -55,18 +58,21 @@
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"heroes" ofType:@"json"];
     // This is a built in method that allows us to load a JSON file into native Cocoa objects (NSDictionaries and NSArrays).
-    NSArray *heroesArrayForJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+    NSDictionary *heroesDictForJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
     
-    for (NSDictionary *aDict in heroesArrayForJSON)
+    if (heroesDictForJSON)
     {
-        
-        Hero *aHero = [Hero heroWithDictionary:aDict];
-        [self.heroes addObject:aHero];
-        
+//        for (NSDictionary *aDict in heroesDictForJSON)
+//        {
+            Hero *aHero = [Hero heroWithDictionary:heroesDictForJSON];
+    
+            // Hero *aHero = heroesDictionaryForJSON;
+            [self.heroes addObject:aHero];
+//        }
     }
     
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    [self.heroes sortUsingDescriptors:[NSArray arrayWithObject:sort]];
+//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+//    [self.heroes sortUsingDescriptors:[NSArray arrayWithObject:sort]];
     [self.tableView reloadData];
     
 }
@@ -103,7 +109,7 @@
     
     // Configure the cell...
     cell.textLabel.text = aHero.name;
-    cell.detailTextLabel.text = aHero.homeworld;
+    cell.detailTextLabel.text = aHero.attributionText;
     
     return cell;
 }

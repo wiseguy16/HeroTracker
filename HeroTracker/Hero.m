@@ -7,6 +7,7 @@
 //
 
 #import "Hero.h"
+#import "HeroMasterTableViewController.h"
 
 @implementation Hero
 
@@ -16,9 +17,12 @@
     if (heroDict)
     {
         aHero = [[Hero alloc] init];
-        aHero.attributionText = heroDict[@"attributionText"]; // credit to Marvel
+        aHero.attributionText = [heroDict objectForKey:@"attributionText"];
+        //aHero.attributionText = heroDict[@"attributionText"]; // credit to Marvel
         
-        NSArray *marvelArray = heroDict[@"results"];
+        NSDictionary *dataDict = heroDict[@"data"];
+        
+        NSArray *marvelArray = dataDict[@"results"];
         for (NSDictionary *result in marvelArray)
         {
             NSString *name  = result[@"name"];
@@ -34,7 +38,7 @@
         
        // aHero.name =  marvelArray[1];
         
-        aHero.homeworld = heroDict[@"homeworld"]; // Not using!!
+      //  aHero.homeworld = heroDict[@"homeworld"]; // Not using!!
         
        // aHero.theDescription = heroDict[@"description"];
        // aHero.imageName = heroDict[@"path"];

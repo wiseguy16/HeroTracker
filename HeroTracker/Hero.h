@@ -12,7 +12,6 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *homeworld; //Not using!!!
-//@property (nonatomic) NSString *theDescription;
 @property (nonatomic) NSString *theDescription;
 @property (nonatomic) NSString *imageName;
 @property (nonatomic) NSString *attributionText; // Credit to Marvel

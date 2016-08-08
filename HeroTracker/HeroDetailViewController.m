@@ -69,9 +69,13 @@
         self.title = [NSString stringWithFormat: @"HERO"];
         
         self.heroNameLabel.text = self.hero.name;
-        self.heroHomeWorldLabel.text = self.hero.homeworld;
-        self.heroPowersLabel.text = self.hero.description;
-        self.heroImageView.image = [UIImage imageNamed:self.hero.imageName];
+       // self.heroHomeWorldLabel.text = self.hero.homeworld;
+        self.heroPowersLabel.text = self.hero.theDescription;
+        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:self.hero.imageName]];
+        // cell.image = [UIImage imageWithData: imageData];
+        
+        self.heroImageView.image = [UIImage imageWithData: imageData];
+      //  self.heroImageView.image = [UIImage imageNamed:self.hero.imageName];
         
         
         
