@@ -21,7 +21,7 @@
 static NSString *marvelCharacterSearchUrl = @"https://gateway.marvel.com/v1/public/characters?ts=%@&name=%@&apikey=%@&hash=%@";
 
 static NSString *publicAPIKey = @"e739fa38cc0c96087a3886327d580973";
-static NSString *privateAPIKey = @"daaabe6580b3169ade2709339b0a7bb943930fa6";
+static NSString *privateAPIKey = @"";
 
 + (APIController *)sharedAPIController
 {
