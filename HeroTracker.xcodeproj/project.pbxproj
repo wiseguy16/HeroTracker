@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3FD61C1D58E15E0023DA28 /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD61B1D58E15E0023DA28 /* APIController.m */; };
 		4AFE70CF1D466D3E000F5C67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE70CE1D466D3E000F5C67 /* main.m */; };
 		4AFE70D21D466D3E000F5C67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE70D11D466D3E000F5C67 /* AppDelegate.m */; };
 		4AFE70D81D466D3E000F5C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE70D61D466D3E000F5C67 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3FD61A1D58E15E0023DA28 /* APIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		4A3FD61B1D58E15E0023DA28 /* APIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
 		4AFE70CA1D466D3E000F5C67 /* HeroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE70CE1D466D3E000F5C67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4AFE70D01D466D3E000F5C67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,10 +73,12 @@
 				4AFE70D11D466D3E000F5C67 /* AppDelegate.m */,
 				4AFE70EC1D467BDE000F5C67 /* Hero.h */,
 				4AFE70ED1D467BDE000F5C67 /* Hero.m */,
-				4AFE70E91D46780C000F5C67 /* HeroDetailViewController.h */,
-				4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */,
 				4AFE70EF1D46A732000F5C67 /* HeroMasterTableViewController.h */,
 				4AFE70F01D46A732000F5C67 /* HeroMasterTableViewController.m */,
+				4AFE70E91D46780C000F5C67 /* HeroDetailViewController.h */,
+				4AFE70EA1D46780C000F5C67 /* HeroDetailViewController.m */,
+				4A3FD61A1D58E15E0023DA28 /* APIController.h */,
+				4A3FD61B1D58E15E0023DA28 /* APIController.m */,
 				4AFE70D61D466D3E000F5C67 /* Main.storyboard */,
 				4AFE70D91D466D3E000F5C67 /* Assets.xcassets */,
 				4AFE70DB1D466D3E000F5C67 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3FD61C1D58E15E0023DA28 /* APIController.m in Sources */,
 				4AFE70F11D46A732000F5C67 /* HeroMasterTableViewController.m in Sources */,
 				4AFE70EE1D467BDE000F5C67 /* Hero.m in Sources */,
 				4AFE70EB1D46780C000F5C67 /* HeroDetailViewController.m in Sources */,
@@ -318,6 +324,7 @@
 				4AFE70E31D466D3E000F5C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

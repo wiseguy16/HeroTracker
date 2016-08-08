@@ -7,6 +7,7 @@
 //
 
 #import "Hero.h"
+#import "HeroMasterTableViewController.h"
 
 @implementation Hero
 
@@ -16,23 +17,30 @@
     if (heroDict)
     {
         aHero = [[Hero alloc] init];
-        aHero.name = [heroDict objectForKey:@"name"];
-        aHero.homeworld = heroDict[@"homeworld"];
-        aHero.powers = heroDict[@"powers"];
-        aHero.imageName = heroDict[@"heroImage"];
+        aHero.attributionText = [heroDict objectForKey:@"attributionText"]; // credit to Marvel
+        
+        NSDictionary *dataDict = heroDict[@"data"];
+        
+        NSArray *marvelArray = dataDict[@"results"];
+        for (NSDictionary *result in marvelArray)
+        {
+            NSString *name  = result[@"name"];
+            aHero.name = name;
+            
+            NSString *aDescription = result[@"description"];
+            aHero.theDescription = aDescription;
+            
+            NSDictionary *anotherDict = result[@"thumbnail"];
+            NSString *aPath = anotherDict[@"path"];
+            aHero.imageName = [NSString stringWithFormat:@"%@.jpg", aPath];
+            
+            NSDictionary *comicsDict = result[@"comics"];
+            aHero.appearances = comicsDict[@"available"];
+        }
+        
     }
     
     return aHero;
 }
 
 @end
-
-
-/*
- {
- "name": "Thor",
- "homeworld": "Asgard",
- "powers": "Superhuman strength, endurance, and longevity; abilities via Mjolnir: dimensional transportation; electric manipulation; flight; weather manipulation",
- "heroImage": "thor"
- },
- */
