@@ -15,6 +15,7 @@
 @property (nonatomic) NSString *theDescription;
 @property (nonatomic) NSString *imageName;
 @property (nonatomic) NSString *attributionText; // Credit to Marvel
+@property (nonatomic) NSNumber *appearances;
 
 + (Hero *)heroWithDictionary:(NSDictionary *)heroDict;
 

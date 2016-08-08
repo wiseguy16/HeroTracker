@@ -62,13 +62,8 @@
     
     if (heroesDictForJSON)
     {
-//        for (NSDictionary *aDict in heroesDictForJSON)
-//        {
             Hero *aHero = [Hero heroWithDictionary:heroesDictForJSON];
-    
-            // Hero *aHero = heroesDictionaryForJSON;
             [self.heroes addObject:aHero];
-//        }
     }
     
 //    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];

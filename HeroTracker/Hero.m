@@ -34,6 +34,9 @@
             NSDictionary *anotherDict = result[@"thumbnail"];
             NSString *aPath = anotherDict[@"path"];
             aHero.imageName = [NSString stringWithFormat:@"%@.jpg", aPath];
+            
+            NSDictionary *comicsDict = result[@"comics"];
+            aHero.appearances = comicsDict[@"available"];
         }
         
        // aHero.name =  marvelArray[1];
